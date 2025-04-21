@@ -1,0 +1,95 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background-color: #f9fafb;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+
+/* Teks di tengah dan diperbesar */
+.hero-text {
+  flex: 1;
+  text-align: center;
+  max-width: 600px;
+}
+.hero-text h1 {
+  font-size: 1.6rem;
+  color: #22c55e;
+  margin-bottom: 0.5rem;
+}
+.hero-text h2 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.hero-text p {
+  font-size: 1.2rem;
+  color: #475569;
+  margin-bottom: 2rem;
+}
+
+/* Link CTA sebagai tombol */
+.cta {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: #22c55e;
+  border: none;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.1s;
+}
+.cta:hover {
+  background: #16a34a;
+}
+.cta:active {
+  transform: scale(0.95);
+  background: #15803d;
+}
+
+/* Gambar 1:1 dan responsive */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.hero-image img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 1rem;
+  transition: transform 0.3s;
+}
+.hero-image img:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive untuk layar kecil */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .hero-image img {
+    width: 200px;
+    height: 200px;
+  }
+}
